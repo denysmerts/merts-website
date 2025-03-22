@@ -1,0 +1,15 @@
+.title-text {
+  font-size: 6.667vw;
+  line-height: 8.333vw;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 3.479vw 0;
+}
+
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 10.465vw;
+    margin: 11.628vw 0 4.651vw;
+  }
+}

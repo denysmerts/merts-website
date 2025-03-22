@@ -1,0 +1,67 @@
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.694vw;
+  padding: 1.528vw 2.083vw;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.--primary {
+    background-color: black;
+    border-radius: 3.472vw;
+    font-size: 2.222vw;
+    color: white;
+    box-shadow: 0vw 0.278vw 1.875vw rgba(0, 0, 0, 0.25);
+  }
+
+  &.--secondary {
+    background-color: white;
+    border-radius: 2.083vw;
+    font-size: 1.528vw;
+    border: 0.069vw solid black;
+    color: black;
+  }
+
+  &.--transparent {
+    padding: 2vw 0 0 0;
+    font-size: 2.5vw;
+    color: black;
+    font-weight: 600;
+  }
+
+  &.--pricing{
+    background-color: rgb(217, 217, 217, 40%);
+    border-radius: 2.778vw;
+    color: black;
+    font-size: 1.667vw;
+    font-weight: 600;
+    line-height: 1.667vw;
+    padding: 1.389vw 6.5vw;
+    white-space: nowrap;
+  }
+
+  &.--form {
+    background-color: black;
+    border-radius: 3.472vw;
+    font-size: 2.222vw;
+    color: white;
+    box-shadow: 0vw 0.278vw 1.875vw rgba(0, 0, 0, 0.25);
+    padding: 1vw 5vw;
+  }
+
+  &__svg {
+    &.--primary {
+      width: 1.875vw;
+      height: 1.528vw;
+      fill: white;
+    }
+    &.--transparent {
+      width: 2vw;
+      height: 2vw;
+    }
+    &.--secondary{
+      width: 1.319vw;
+      height: 1.25vw;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { default as CodingAnimation } from './CodingAnimation';

@@ -1,0 +1,204 @@
+.home-screen {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  &__hero-section {
+    position: relative;
+
+    &__title-text {
+      font-size: 7vw;
+      font-weight: bold;
+      color: black;
+      line-height: 8.333vw;
+      margin: 2.778vw 0;
+      &__grey-text {
+        color: rgb(0, 0, 0, 40%);
+      }
+    }
+    &__button {
+      display: inline-block;
+      width: fit-content;
+    }
+    &__sub-text {
+      position: absolute;
+      bottom: -5%;
+      right: 0%;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 2.222vw;
+      font-weight: 600;
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 11.628vw;
+    }
+  }
+}
+
+.first-section {
+  margin-top: 6vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.083vw;
+    width: 30.674vw;
+    @media (max-width: 768px) {
+      width: 90.698vw;
+    }
+    &__title {
+      font-size: 3.472vw;
+      font-weight: bold;
+      color: black;
+    }
+    &__sub-title {
+      font-weight: 500;
+      font-size: 1.667vw;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-section {
+  padding: 6.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -6.944vw;
+  margin-top: 6.944vw;
+
+  &__button {
+    display: inline-block;
+    width: fit-content;
+  }
+  &__title {
+    font-size: 8.333vw;
+    line-height: 8.333vw;
+    font-weight: bold;
+    margin-bottom: 2.778vw;
+    &__span {
+      color: rgba(0, 0, 0, 0.4);
+      @media (max-width: 768px) {
+        display: block;
+        white-space: nowrap;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__title {
+      margin-bottom: 4.651vw;
+      font-size: 15.116vw;
+      line-height: 15.116vw;
+      text-align: center;
+    }
+  }
+}
+
+.FAQ-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7vw;
+}
+
+.footer {
+  background-color: black;
+  margin: 6.944vw -6.944vw 0 -6.944vw;
+  padding: 3.472vw 6.944vw;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding: 11.628vw 4.651vw;
+  }
+}
+
+.works-section {
+  margin: 0 -6.944vw;
+}
+
+.more {
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+@media (max-width: 768px) {
+  .home-screen {
+    &__hero-section {
+      &__title-text {
+        font-size: 14.884vw;
+        line-height: 100%;
+        letter-spacing: 0.1vw;
+        text-align: center;
+        margin: 11.628vw 0 4.651vw;
+      }
+    }
+    .first-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__text {
+        &__title {
+          order: 1;
+          font-size: 10.8vw;
+          line-height: 9.767vw;
+          text-align: center;
+        }
+        &__sub-title {
+          order: 2;
+          margin-top: 4.651vw;
+          font-size: 4.651vw;
+          line-height: 5.581vw;
+          letter-spacing: 0.233vw;
+          text-align: center;
+        }
+      }
+      &__animation {
+        order: 3;
+        margin-top: 4.651vw;
+      }
+    }
+  }
+  .action-button.--primary {
+    font-size: 8.372vw;
+    padding: 5vw 22.442vw;
+    white-space: nowrap;
+    border-radius: 11.628vw;
+  }
+  .cards-container {
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 4.651vw;
+  }
+  .plans-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.651vw;
+  }
+  .FAQ-section {
+    padding: 0;
+  }
+}

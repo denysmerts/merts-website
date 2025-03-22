@@ -1,0 +1,129 @@
+.footer-container {
+  display: flex;
+  gap: 10vw;
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__logo {
+      fill: white;
+      width: 15.347vw;
+      height: 5.069vw;
+    }
+
+    &__subtext {
+      font-size: 1.2vw;
+      font-weight: 600;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-content: start;
+    text-align: left;
+    gap: 6.944vw;
+
+    &__pages {
+      &__name {
+        font-size: 1.806vw;
+        font-weight: bold;
+      }
+
+      &__link {
+        margin-top: 0.1vw;
+        font-size: 1.5vw;
+        font-weight: normal;
+      }
+
+      &__link li {
+        margin-top: 0.5vw;
+        cursor: pointer;
+      }
+    }
+
+    &__socials {
+      &__name {
+        font-size: 1.806vw;
+        font-weight: bold;
+      }
+
+      &__link {
+        margin-top: 0.1vw;
+        font-size: 1.5vw;
+        font-weight: normal;
+      }
+
+      &__link li {
+        margin-top: 0.5vw;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__links ul {
+    align-content: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+
+      &__pages {
+        &__name {
+          font-size: 4.651vw;
+        }
+
+        &__link {
+          font-size: 4.186vw;
+        }
+
+        &__link li {
+          margin-top: 2.326vw;
+          cursor: pointer;
+        }
+      }
+
+      &__socials {
+        &__name {
+          font-size: 4.651vw;
+        }
+
+        &__link {
+          font-size: 4.186vw;
+        }
+
+        &__link li {
+          margin-top: 2.326vw;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__text {
+      align-items: start;
+      gap: 2.326vw;
+
+      &__subtext {
+        font-size: 4.651vw;
+        font-weight: 500;
+      }
+      &__logo {
+        width: 26.047vw;
+        height: 8.605vw;
+      }
+    }
+  }
+}

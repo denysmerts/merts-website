@@ -1,0 +1,171 @@
+// NavBar.scss
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  z-index: 1000;
+  padding: 1.2vw 6.944vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+
+  &.menu-open {
+    background-color: black;
+    color: white;
+
+    .navbar__logo {
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  &__logo {
+    width: 15.347vw;
+    height: 5.069vw;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    color: inherit;
+
+    &.active {
+      background-color: black;
+      align-items: start;
+    }
+
+    &__links {
+      margin-right: 1.389vw;
+
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 1.389vw;
+        font-size: 2.222vw;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+
+    &__button {
+      display: inline-block;
+      width: fit-content;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.5vw;
+  background: none;
+  border: none;
+
+  span {
+    width: 3.023vw;
+    height: 0.465vw;
+    border-radius: 3.023vw;
+    background: #333;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span {
+      background: white;
+    }
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(0.7vw, 0.7vw);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(0.6vw, -0.6vw);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2vw 4vw;
+
+    &__logo {
+      width: 34.419vw;
+      height: 11.395vw;
+    }
+
+    .hamburger {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 3.023vw;
+      padding: 2.791vw 3.488vw;
+      &.active {
+        border: 1px solid white;
+      }
+    }
+
+    &__container {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: white;
+      padding: 4vw;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+
+      &.active {
+        display: flex;
+        max-height: 500px;
+        color: white;
+        border: white;
+      }
+
+      &__links {
+        ul {
+          flex-direction: column;
+          gap: 4vw;
+          font-size: 5vw;
+        }
+        li {
+          font-size: 7vw;
+        }
+      }
+
+      &__button {
+        display: none;
+      }
+    }
+  }
+}

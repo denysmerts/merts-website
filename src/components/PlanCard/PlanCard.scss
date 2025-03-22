@@ -1,0 +1,133 @@
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.778vw 2vw;
+  box-shadow: 0.139vw 0vw 1.472vw rgba(0, 0, 0, 0.1);
+  border-radius: 2.083vw;
+  align-items: center;
+  width: 100%;
+
+  &__logo {
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    background-color: rgb(0, 0, 0, 30%);
+    border-radius: 3.472vw;
+    padding: 1vw;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1.042vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-size: 1.389vw;
+    font-weight: 600;
+    line-height: 2.083vw;
+    margin-bottom: 0.347vw;
+  }
+
+  &__price {
+    font-size: 3.194vw;
+    font-weight: bold;
+    line-height: 4.167vw;
+    letter-spacing: -2%;
+    margin-bottom: 0.347vw;
+  }
+
+  &__description {
+    font-size: 1.19vw;
+    line-height: 1.25vw;
+    font-family: 500;
+    color: rgb(0, 0, 0, 40%);
+    margin-bottom: 0.347vw;
+    text-align: center;
+  }
+
+  &__feature-item {
+    display: flex;
+    gap: 0.833vw;
+    margin-bottom: 1.042vw;
+    font-size: 1.319vw;
+    font-weight: 500;
+    align-items: start;
+    align-items: center;
+
+    svg {
+      width: 1.3vw;
+      height: 1.6vw;
+    }
+  }
+
+  &__feature-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__button {
+    margin-top: 2.778vw;
+  }
+
+  &__divider {
+    width: 2vw;
+    height: 0.069vw;
+    border: none;
+    background-color: rgb(0, 0, 0, 40%);
+    margin-bottom: 2.778vw;
+  }
+
+  &__services {
+    width: 100%;
+    text-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-card {
+    border-radius: 6.977vw;
+    padding: 7.442vw;
+    &__button {
+      font-size: 5.581vw;
+    }
+    &__divider {
+      width: 5vw;
+    }
+
+    &__name {
+      font-size: 4.419vw;
+      line-height: 100%;
+    }
+    &__price {
+      margin: 2.326vw 0;
+      font-size: 10.698vw;
+      line-height: 100%;
+    }
+    &__description {
+      font-size: 3.721vw;
+      line-height: 100%;
+    }
+    &__feature-item {
+      display: flex;
+      align-items: center;
+      font-size: 4.419vw;
+      line-height: 100%;
+      margin-bottom: 3.721vw;
+      gap: 2.791vw;
+    }
+
+    &__services {
+      padding: 9.302vw 0;
+    }
+    &__logo {
+      padding: 2.791vw;
+      border-radius: 20vw;
+      margin-bottom: 3.488vw;
+    }
+    .action-button.--pricing {
+      font-size: 5.581vw;
+      padding: 5vw 22.442vw;
+      white-space: nowrap;
+      border-radius: 11.628vw;
+      line-height: 100%;
+    }
+  }
+}

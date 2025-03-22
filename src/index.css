@@ -1,0 +1,26 @@
+:root {
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin-top: 6vw;
+}
+
+#services,
+#works,
+#plans,
+#home {
+  scroll-margin-top: 6vw;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 13vw;
+  }
+}
