@@ -17,8 +17,9 @@
       }
     }
     &__button {
-      display: inline-block;
+      display: flex;
       width: fit-content;
+      gap: 2vw;
     }
     &__sub-text {
       position: absolute;
@@ -26,7 +27,7 @@
       right: 0%;
       text-align: left;
       color: rgba(0, 0, 0, 0.4);
-      font-size: 2.222vw;
+      font-size: 2vw;
       font-weight: 600;
       white-space: nowrap;
 
@@ -84,13 +85,14 @@
   align-items: center;
   margin: 0 -6.944vw;
   margin-top: 6.944vw;
+  white-space: nowrap;
 
   &__button {
     display: inline-block;
     width: fit-content;
   }
   &__title {
-    font-size: 8.333vw;
+    font-size: 7vw;
     line-height: 8.333vw;
     font-weight: bold;
     margin-bottom: 2.778vw;

@@ -8,16 +8,17 @@
 
   &.--primary {
     background-color: black;
+    padding: 1.528vw 3vw;
     border-radius: 3.472vw;
-    font-size: 2.222vw;
+    font-size: 1.7vw;
     color: white;
     box-shadow: 0vw 0.278vw 1.875vw rgba(0, 0, 0, 0.25);
   }
 
   &.--secondary {
     background-color: white;
-    border-radius: 2.083vw;
-    font-size: 1.528vw;
+    border-radius: 3vw;
+    font-size: 1.8vw;
     border: 0.069vw solid black;
     color: black;
   }
@@ -29,7 +30,7 @@
     font-weight: 600;
   }
 
-  &.--pricing{
+  &.--pricing {
     background-color: rgb(217, 217, 217, 40%);
     border-radius: 2.778vw;
     color: black;
@@ -51,17 +52,17 @@
 
   &__svg {
     &.--primary {
-      width: 1.875vw;
-      height: 1.528vw;
+      width: 1.7vw;
+      height: 1.7w;
       fill: white;
     }
     &.--transparent {
       width: 2vw;
       height: 2vw;
     }
-    &.--secondary{
-      width: 1.319vw;
-      height: 1.25vw;
+    &.--secondary {
+      width: 1.7vw;
+      height: 1.7vw;
     }
   }
 }
