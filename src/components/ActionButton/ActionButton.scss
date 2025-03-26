@@ -55,6 +55,9 @@
       width: 1.7vw;
       height: 1.7w;
       fill: white;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     &.--transparent {
       width: 2vw;
@@ -64,5 +67,14 @@
       width: 1.7vw;
       height: 1.7vw;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .action-button.--primary {
+    font-size: 8vw;
+    padding: 4vw 15vw;
+    white-space: nowrap;
+    border-radius: 11.628vw;
   }
 }

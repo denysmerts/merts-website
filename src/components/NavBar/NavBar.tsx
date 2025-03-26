@@ -44,9 +44,11 @@ const HamburgerButton = ({
     onClick={onClick}
     aria-label="Toggle menu"
   >
-    <span></span>
-    <span></span>
-    <span></span>
+    <div className="spans">
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+    </div>
   </button>
 );
 

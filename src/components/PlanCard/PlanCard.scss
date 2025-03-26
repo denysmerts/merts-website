@@ -112,12 +112,19 @@
       line-height: 100%;
       margin-bottom: 3.721vw;
       gap: 2.791vw;
+
+      svg {
+        width: 4vw;
+        height: 5.5vw;
+      }
     }
 
     &__services {
       padding: 9.302vw 0;
     }
     &__logo {
+      width: 10vw;
+      height: 10vw;
       padding: 2.791vw;
       border-radius: 20vw;
       margin-bottom: 3.488vw;

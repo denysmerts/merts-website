@@ -48,7 +48,7 @@
 
     &.active {
       background-color: black;
-      align-items: start;
+      align-items: flex-start;
     }
 
     &__links {
@@ -79,40 +79,64 @@
   }
 }
 
+// Hamburger Button Styles
 .hamburger {
-  display: none;
+  display: none; // Hidden by default, shown on mobile
   flex-direction: column;
-  gap: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
   background: none;
-  border: none;
-
-  span {
-    width: 3.023vw;
-    height: 0.465vw;
-    border-radius: 3.023vw;
-    background: #333;
-    transition: all 0.3s ease;
-  }
+  border: 1px solid black;
+  border-radius: 3vw;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &.active {
-    span {
-      background: white;
+    border-color: white;
+
+    .spans {
+      .line {
+        background: white;
+      }
+
+      .line:nth-child(1) {
+        transform: translateY(0.5rem) rotate(45deg);
+      }
+
+      .line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .line:nth-child(3) {
+        transform: translateY(-0.5rem) rotate(-45deg);
+      }
     }
-    span:nth-child(1) {
-      transform: rotate(45deg) translate(0.7vw, 0.7vw);
-    }
-    span:nth-child(2) {
-      opacity: 0;
-    }
-    span:nth-child(3) {
-      transform: rotate(-45deg) translate(0.6vw, -0.6vw);
+  }
+
+  .spans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem; // Container for lines
+    height: 1.125rem; // Space for three lines and gaps
+    gap: 0.375rem;
+
+    .line {
+      width: 1.5rem; // Full width of .spans
+      height: 0.1875rem; // Thickness of each line
+      background: black; // Default color for visibility
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
     }
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 2vw 4vw;
+    padding: 2vw 6.977vw;
 
     &__logo {
       width: 34.419vw;
@@ -121,16 +145,11 @@
 
     .hamburger {
       display: flex;
-      border: 1px solid black;
-      border-radius: 3.023vw;
-      padding: 2.791vw 3.488vw;
-      &.active {
-        border: 1px solid white;
-      }
+      padding: 4vw 5vw;
     }
 
     &__container {
-      display: none;
+      display: none; // Hidden by default on mobile
       position: absolute;
       top: 100%;
       left: 0;
@@ -146,9 +165,10 @@
 
       &.active {
         display: flex;
-        max-height: 500px;
+        max-height: 40vw;
         color: white;
-        border: white;
+        background-color: black;
+        box-shadow: none;
       }
 
       &__links {
@@ -157,13 +177,14 @@
           gap: 4vw;
           font-size: 5vw;
         }
+
         li {
           font-size: 7vw;
         }
       }
 
       &__button {
-        display: none;
+        display: none; // Hidden on mobile
       }
     }
   }

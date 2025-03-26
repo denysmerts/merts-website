@@ -1,5 +1,5 @@
 .card-container {
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -31,20 +31,20 @@
 }
 
 @media (max-width: 768px) {
-  .card-container{
+  .card-container {
     padding: 6.977vw 5.814vw;
     border-radius: 5.814vw;
     box-shadow: 0.2vw 0.93vw 2.326vw rgba(0, 0, 0, 0.1);
-    &__title{
-      margin: 6.512vw 0 2.326vw;
-      font-size: 6.977vw;
-    }
-    &__description{
-      font-size: 4.651vw;
-    }
-    &__icon-container{
-      padding: 5.814vw;
-    }
 
+    &__title {
+      margin: 4vw 0 2vw;
+      font-size: 6vw;
+    }
+    &__description {
+      font-size: 4vw;
+    }
+    &__icon-container {
+      padding: 3vw;
+    }
   }
 }

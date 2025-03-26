@@ -50,7 +50,7 @@ export const HomeScreen = () => {
             </div>
             <div className="first-section__text">
               <div className="first-section__text__title">
-                Order your pass to Success.
+                Order Your Pass To Success.
               </div>
               <div className="first-section__text__sub-title">
                 We handle everything from idea generation to design,

@@ -30,7 +30,7 @@
     transform: translateY(20px);
     min-height: 30vw;
     position: relative;
-    
+
     &__close-button {
       position: absolute;
       top: 3%;
@@ -43,9 +43,9 @@
       transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
       rotate: 45deg;
 
-      &__svg{        
-          height: 2vw;
-          width: 2vw;
+      &__svg {
+        height: 2vw;
+        width: 2vw;
       }
     }
 
@@ -91,7 +91,7 @@
       align-items: center;
       padding: 1.389vw;
       min-height: 100%;
-      
+
       &__title {
         margin-bottom: 1.389vw;
       }
@@ -109,7 +109,7 @@
     width: 100%;
     text-align: start;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       font-size: 3vw;
     }
   }
@@ -122,25 +122,26 @@
   align-items: start;
   margin-bottom: 1.5vw;
   font-weight: 500;
-  
+
   &.last-input {
     margin-bottom: 0;
     padding: 1vw 0vw;
 
-    @media (max-width: 768px){
-      margin-top: 3.488vw;
+    @media (max-width: 768px) {
+      margin-top: 1vw;
     }
   }
 
-  input, textarea {
+  input,
+  textarea {
     transition: border-color 0.3s ease-in-out;
     font-size: 0.8vw;
-    
+
     &:focus {
       border-color: #666;
       outline: none;
     }
-    
+
     &.invalid {
       border-color: #ff0000;
       border-width: 0.139vw;
@@ -172,65 +173,66 @@ textarea {
   font-weight: 400;
 }
 
-.button{
+.button {
   margin-top: 1vw;
 }
 
 @media (max-width: 768px) {
-  .contact-form{
-    &__content{
-      min-width: 95vw;
+  .contact-form {
+    &__content {
       border-radius: 4.651vw;
-      padding: 11.628vw 0;
+      padding: 4vw 15vw;
 
       &__close-button {
-        &__svg{
-          width: 6vw;
-          height: 6vw;
+        &__svg {
+          width: 5vw;
+          height: 5vw;
         }
       }
 
-      &__form-container{  
-        &__united{
+      &__form-container {
+        &__united {
           display: flex;
           flex-direction: column;
-          margin-bottom: 3.488vw;
+          margin-bottom: 1vw;
         }
       }
-      
-      &__title{
-        font-size: 7.442vw;
-        margin-bottom: 1.163vw;
+
+      &__title {
+        font-size: 5vw;
+        margin-top: 4vw;
+        margin-bottom: 1vw;
       }
 
-      &__sub-title{
-        font-size: 3.721vw;
-        margin-bottom: 6.977vw;
+      &__sub-title {
+        font-size: 2.5vw;
+        margin-bottom: 5vw;
       }
 
-      label{
-        font-size: 5.581vw;
-        margin-bottom: 3.488vw;
+      label {
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
       }
 
-      input{
-        font-size: 4.651vw;
-        padding: 3.488vw;
+      input {
+        font-size: 3vw;
+        padding: 3vw;
         border-radius: 3.488vw;
       }
 
-      .action-button.--form{
-        font-size:5.814vw ;
-        padding: 3.953vw 21.163vw;
+      .action-button.--form {
+        font-size: 4.5vw;
+        padding: 4vw 20vw;
         border-radius: 11.628vw;
-        margin-top: 9.302vw;
+        margin-top: 3vw;
       }
 
-      textarea{
-      border-radius: 2.628vw;
-      padding: 3.488vw;
-      height: 40vw;
-      }      
+      textarea {
+        border-radius: 2.5vw;
+        font-size: 3vw;
+        padding: 3vw;
+        height: 20vw;
+      }
     }
   }
 }
