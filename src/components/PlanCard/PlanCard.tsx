@@ -21,7 +21,7 @@ export const PlanCard = ({ plan, onOpenForm }: PlanCardProps) => {
   return (
     <div className="plan-card">
       <div className="plan-card__logo">
-        <Logo />
+        <Logo className="logo" />
       </div>
 
       <div className="plan-card__name">{name}</div>
