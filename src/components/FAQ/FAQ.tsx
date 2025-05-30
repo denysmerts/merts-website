@@ -12,14 +12,16 @@ export const FAQ = ({ question, answer }: FAQProps) => {
 
   return (
     <div onClick={() => setOpen(!open)} className="faq-container">
-      <div className="faq-container__header">
-        <div className="faq-container__question">{question}</div>
-        <div className={`faq-container__svg ${open ? "open" : ""}`}>
-          <CrossSVG />
+      <div className="faq-container__wrapper">
+        <div className="faq-container__header">
+          <div className="faq-container__question">{question}</div>
+          <div className={`faq-container__svg ${open ? "open" : ""}`}>
+            <CrossSVG />
+          </div>
         </div>
-      </div>
-      <div className={`faq-container__answer-wrapper ${open ? "open" : ""}`}>
-        <div className="faq-container__answer">{answer}</div>
+        <div className={`faq-container__answer-wrapper ${open ? "open" : ""}`}>
+          <div className="faq-container__answer">{answer}</div>
+        </div>
       </div>
     </div>
   );

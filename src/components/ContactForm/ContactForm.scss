@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     background: white;
-    padding: 3vw 6vw;
+    padding: 2vw 4vw;
     border-radius: 1.389vw;
     box-shadow: 0 0.278vw 0.694vw rgba(0, 0, 0, 0.3);
     transform: translateY(20px);
@@ -50,7 +50,7 @@
     }
 
     &__title {
-      font-size: 2.5vw;
+      font-size: 3.472vw;
       text-align: center;
       font-weight: bold;
       white-space: nowrap;
@@ -59,7 +59,7 @@
     }
 
     &__sub-title {
-      font-size: 1vw;
+      font-size: 1.3vw;
       color: rgba(0, 0, 0, 0.3);
       text-align: center;
       margin-bottom: 1.5vw;
@@ -135,7 +135,8 @@
   input,
   textarea {
     transition: border-color 0.3s ease-in-out;
-    font-size: 0.8vw;
+    font-size: 1.1vw;
+    line-height: 1.3vw;
 
     &:focus {
       border-color: #666;
@@ -150,7 +151,7 @@
 }
 
 label {
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   font-weight: 500;
   margin-bottom: 1.042vw;
 }

@@ -99,22 +99,23 @@ export const NavBar = ({ onOpenForm }: NavBarProps) => {
   };
 
   return (
-    <div>
+    <>
       <div className={`navbar ${isOpen ? "menu-open" : ""}`}>
-        <LogoSVG
-          className="navbar__logo"
-          onClick={() => {
-            scrollToSection("home");
-            setIsOpen(false);
-          }}
-        />
-        <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-
-        <div className={`navbar__container ${isOpen ? "active" : ""}`}>
-          <NavLinks items={NavItems} onItemClick={handleNavigation} />
-          <NavButton onClick={onOpenForm} />
+        <div className="navbar__wrapper">
+          <LogoSVG
+            className="navbar__logo"
+            onClick={() => {
+              scrollToSection("home");
+              setIsOpen(false);
+            }}
+          />
+          <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+          <div className={`navbar__container ${isOpen ? "active" : ""}`}>
+            <NavLinks items={NavItems} onItemClick={handleNavigation} />
+            <NavButton onClick={onOpenForm} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };

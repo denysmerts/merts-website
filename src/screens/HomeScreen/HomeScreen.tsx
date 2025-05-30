@@ -13,6 +13,7 @@ import { CodingAnimation, TeamworkAnimation } from "../../animations";
 import { CardsData, FAQData, PlansData } from "../../data";
 import { useState } from "react";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
+import hero from "../../assets/img/hero.png";
 import "./HomeScreen.scss";
 
 export const HomeScreen = () => {
@@ -21,24 +22,33 @@ export const HomeScreen = () => {
 
   return (
     <div className="home-screen" id="home">
+      <NavBar onOpenForm={() => setIsFormOpen(true)} />
       <div className="home-screen__hero-section">
-        <NavBar onOpenForm={() => setIsFormOpen(true)} />
-        <div className="home-screen__hero-section__title-text">
-          Developing outstanding websites for{" "}
-          <span className="home-screen__hero-section__title-text__grey-text">
-            business.
-          </span>
-        </div>
-        <div className="home-screen__hero-section__button">
-          <ActionButton
-            variant="primary"
-            translationKey="View Plans"
-            onClick={() => scrollToSection("plans")}
-          />
-        </div>
-        <div className="home-screen__hero-section__sub-text">
-          Creating tailored web solutions to elevate <br /> your business in the
-          digital world.
+        <div className="home-screen__hero-section__wrapper">
+          <div className="m">
+            <div>
+              <div className="home-screen__hero-section__title-text">
+                Empower your brand <br />
+                with Powerful <br /> Web Solutions
+              </div>
+              <div className="home-screen__hero-section__sub-text">
+                Creating tailored web solutions to elevate <br /> your business
+                in the digital world.
+              </div>
+
+              <div className="home-screen__hero-section__button">
+                <ActionButton
+                  variant="primary"
+                  translationKey="View Plans"
+                  onClick={() => scrollToSection("plans")}
+                />
+              </div>
+            </div>
+
+            <div>
+              <img src={hero} className="home-screen__hero-section__img" />
+            </div>
+          </div>
         </div>
       </div>
 

@@ -18,7 +18,7 @@
     }
 
     &__subtext {
-      font-size: 1.2vw;
+      font-size: 1.3vw;
       font-weight: 600;
     }
   }
@@ -31,13 +31,13 @@
 
     &__pages {
       &__name {
-        font-size: 1.806vw;
+        font-size: 1.7vw;
         font-weight: bold;
       }
 
       &__link {
         margin-top: 0.1vw;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         font-weight: normal;
       }
 
@@ -49,13 +49,13 @@
 
     &__socials {
       &__name {
-        font-size: 1.806vw;
+        font-size: 1.7vw;
         font-weight: bold;
       }
 
       &__link {
         margin-top: 0.1vw;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         font-weight: normal;
       }
 
@@ -126,4 +126,13 @@
       }
     }
   }
+}
+
+.footer-container__wrapper {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

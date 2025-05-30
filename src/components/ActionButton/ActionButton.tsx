@@ -1,8 +1,14 @@
 import { ReactComponent as ArrowSVG } from "../../assets/svgs/Arrow.svg";
 import "./ActionButton.scss";
 
-type TransaltionKey = "Reach Out" | "Get Started" | "More Works" | "Order Now" | "Submit" | "View Plans";
-type StyleVariant = "primary" | "secondary" | "transparent" | "pricing" | "form";
+type TransaltionKey =
+  | "Reach Out"
+  | "Get Started"
+  | "More Works"
+  | "Order Now"
+  | "Submit"
+  | "View Plans";
+type StyleVariant = "primary" | "secondary" | "pricing" | "form";
 
 interface ActionButtonProps {
   onClick: () => void;

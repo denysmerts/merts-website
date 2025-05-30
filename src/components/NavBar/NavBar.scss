@@ -58,7 +58,7 @@
         display: flex;
         list-style: none;
         gap: 1.389vw;
-        font-size: 2vw;
+        font-size: 1.7vw;
         font-weight: 600;
         margin: 0;
         padding: 0;
@@ -188,4 +188,13 @@
       }
     }
   }
+}
+
+.navbar__wrapper {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

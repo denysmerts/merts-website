@@ -77,4 +77,17 @@
   @media (min-width: 769px) {
     padding-left: 6.944vw;
   }
+
+  @media (min-width: 1520px) {
+    padding-left: 0;
+  }
+}
+
+.slider__wrapper {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

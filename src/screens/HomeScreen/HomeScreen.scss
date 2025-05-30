@@ -5,13 +5,20 @@
 
   &__hero-section {
     position: relative;
+    margin-top: 9vw;
+
+    &__img {
+      width: 33.7vw;
+      height: 27vw;
+    }
 
     &__title-text {
-      font-size: 7vw;
+      font-size: 4.5vw;
       font-weight: bold;
       color: black;
-      line-height: 8.333vw;
-      margin: 2.778vw 0;
+      line-height: 4.5vw;
+      margin-bottom: 2vw;
+
       &__grey-text {
         color: rgb(0, 0, 0, 40%);
       }
@@ -19,16 +26,14 @@
     &__button {
       display: flex;
       width: fit-content;
+      margin-top: 2.5vw;
       gap: 2vw;
     }
     &__sub-text {
-      position: absolute;
-      bottom: -5%;
-      right: 0%;
       text-align: left;
       color: rgba(0, 0, 0, 0.4);
-      font-size: 2vw;
-      font-weight: 600;
+      font-size: 1.667vw;
+      font-weight: 400;
       white-space: nowrap;
 
       @media (max-width: 768px) {
@@ -46,7 +51,7 @@
 }
 
 .first-section {
-  margin-top: 6vw;
+  margin-top: 9vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -96,8 +101,8 @@
     width: fit-content;
   }
   &__title {
-    font-size: 7vw;
-    line-height: 8.333vw;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
     font-weight: bold;
     margin-bottom: 2.778vw;
     &__span {
@@ -199,4 +204,17 @@
   .FAQ-section {
     padding: 0;
   }
+}
+
+.home-screen__hero-section__wrapper {
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m {
+  display: flex;
+  justify-content: space-between;
 }

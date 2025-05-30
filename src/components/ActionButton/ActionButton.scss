@@ -9,7 +9,7 @@
   &.--primary {
     background-color: black;
     padding: 1.528vw 3vw;
-    border-radius: 3.472vw;
+    border-radius: 3vw;
     font-size: 1.7vw;
     color: white;
     box-shadow: 0vw 0.278vw 1.875vw rgba(0, 0, 0, 0.25);
@@ -18,25 +18,18 @@
   &.--secondary {
     background-color: white;
     border-radius: 3vw;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     border: 0.069vw solid black;
     color: black;
-  }
-
-  &.--transparent {
-    padding: 2vw 0 0 0;
-    font-size: 2.5vw;
-    color: black;
-    font-weight: 600;
   }
 
   &.--pricing {
     background-color: rgb(217, 217, 217, 40%);
     border-radius: 2.778vw;
     color: black;
-    font-size: 1.667vw;
+    font-size: 1.7vw;
     font-weight: 600;
-    line-height: 1.667vw;
+    line-height: 1.7vw;
     padding: 1.389vw 6.5vw;
     white-space: nowrap;
   }
@@ -44,7 +37,7 @@
   &.--form {
     background-color: black;
     border-radius: 3.472vw;
-    font-size: 2.222vw;
+    font-size: 1.7vw;
     color: white;
     box-shadow: 0vw 0.278vw 1.875vw rgba(0, 0, 0, 0.25);
     padding: 1vw 5vw;
@@ -59,10 +52,7 @@
         display: none;
       }
     }
-    &.--transparent {
-      width: 2vw;
-      height: 2vw;
-    }
+
     &.--secondary {
       width: 1.7vw;
       height: 1.7vw;

@@ -23,10 +23,15 @@ export const Slider = () => {
   const [slideWidth, setSlideWidth] = useState<number>(33.33);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchMove, setTouchMove] = useState<number | null>(null);
+  const [visibleSlides, setVisibleSlides] = useState<number>(3); // default for desktop
+
+  const getVisibleSlidesCount = () => (window.innerWidth <= 768 ? 1 : 3);
 
   useEffect(() => {
     const handleResize = () => {
-      setSlideWidth(window.innerWidth <= 768 ? 100 : 33.33);
+      const count = getVisibleSlidesCount();
+      setVisibleSlides(count);
+      setSlideWidth(100 / count);
     };
 
     handleResize();
@@ -35,10 +40,13 @@ export const Slider = () => {
   }, []);
 
   const handleSlideChange = (direction: "next" | "prev") => {
+    const maxIndex = SliderData.length - visibleSlides;
+
     setIndex((prevIndex) => {
-      if (direction === "next")
-        return prevIndex >= SliderData.length - 1 ? 0 : prevIndex + 1;
-      return prevIndex <= 0 ? SliderData.length - 1 : prevIndex - 1;
+      if (direction === "next") {
+        return prevIndex >= maxIndex ? maxIndex : prevIndex + 1;
+      }
+      return prevIndex <= 0 ? 0 : prevIndex - 1;
     });
   };
 
@@ -70,42 +78,37 @@ export const Slider = () => {
 
   return (
     <div className="slider">
-      {index > 0 && (
-        <SliderButton
-          direction="left"
-          onClick={() => handleSlideChange("prev")}
-        />
-      )}
-      <div
-        className="slider__content"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="slider__wrapper">
+        {index > 0 && (
+          <SliderButton
+            direction="left"
+            onClick={() => handleSlideChange("prev")}
+          />
+        )}
         <div
-          className="slider__track"
-          style={{ transform: `translateX(-${index * slideWidth}%)` }}
+          className="slider__content"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
-          {SliderData.map((imageSrc, i) => (
-            <div key={i} className="slider__content__slide">
-              <img src={imageSrc} alt={`Slide ${i + 1}`} />
-            </div>
-          ))}
+          <div
+            className="slider__track"
+            style={{ transform: `translateX(-${index * slideWidth}%)` }}
+          >
+            {SliderData.map((imageSrc, i) => (
+              <div key={i} className="slider__content__slide">
+                <img src={imageSrc} alt={`Slide ${i + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
+        {index < SliderData.length - visibleSlides && (
+          <SliderButton
+            direction="right"
+            onClick={() => handleSlideChange("next")}
+          />
+        )}
       </div>
-      {index < SliderData.length - 1 && (
-        <SliderButton
-          direction="right"
-          onClick={() => handleSlideChange("next")}
-        />
-      )}
-      {/* <div className="slider__button-container">
-        <ActionButton
-          variant="transparent"
-          translationKey="More Works"
-          onClick={() => console.log("text")}
-        />
-      </div> */}
     </div>
   );
 };
